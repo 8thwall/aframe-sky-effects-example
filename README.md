@@ -4,15 +4,6 @@ This Sky Effects template project showcases the sky coaching overlay, explains h
 
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJhMTBmZDZmMDA2ODQwNzkzMmY5MmZmOTY0MDQ4NzQyODUzMjA3NCZjdD1n/5XPvrqoJ64p54GLj3i/giphy.gif)
 
-For detailed documentation, visit the [Sky Effects docs](https://www.8thwall.com/docs/web/#xr8layerscontroller) 🔗
-
-#### Sky Effects Overview
-* **sky-recenter.js** recenters the sky scene automatically when sky is initially detected to ensure that the scene forward direction is the same as where sky was found.
-* **sky-coaching-overlay** configures a sky coaching overlay to instruct users to look towards the sky when they are not looking at it. This component comes from the API 
-and can be added using `<meta name="8thwall:package" content="@8thwall.coaching-overlay">`
-* **sky-remote-authoring** reconfigures your scene for sky effects desktop development and allows for remote authoring.
-* **space.png** default space texture with an opacity gradient applied to the bottom to help with edge feathering
-
 ### *Developing Sky Effects Experiences*
 Sky effects scenes are designed for scenes that exist only in the sky.
 
@@ -32,7 +23,6 @@ are positioning the object.
 
 ### *Remote Desktop Development Setup*
 ![](https://media.giphy.com/media/HyrfHNnj0UKpnDj7PM/giphy-downsized-large.gif)
-
 
 It is often helpful to use the `sky-remote-authoring` component to position sky effects content remotely on your desktop. 
 To set up this project's scene for remote desktop development, disable any components related to 8thWall's AR engine or mobile development
