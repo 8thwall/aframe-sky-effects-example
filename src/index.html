@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <title>A-Frame: Sky Effects Example</title>
+  <script crossorigin="anonymous" src="../external/scripts/8frame-1.5.0.min.js"></script>
+  <script crossorigin="anonymous" src="../external/xrextras/xrextras.js"></script>
+  <script crossorigin="anonymous" src="../external/landing-page/landing-page.js"></script>
+  <script crossorigin="anonymous" src="../external/xr/xr.js" async="true" data-preload-chunks="slam"></script>
+  <script>
+    /* globals AFRAME */
+    AFRAME.registerComponent('sky-recenter', {
+      init() {
+        const recenter = () => {
+          this.el.emit('recenter')
+          this.el.removeEventListener('sky-coaching-overlay.hide', recenter)
+        }
+        this.el.addEventListener('sky-coaching-overlay.hide', recenter)
+      },
+    })
+  </script>
+</head>
+
+<body>
+  <a-scene xrextras-loading xrextras-runtime-error landing-page sky-coaching-overlay sky-recenter renderer="colorManagement: true" xrlayers>
+
+    <a-assets>
+      <img id="skyTexture" src='assets/space.png'>
+    </a-assets>
+
+    <a-camera position="0 3 0"></a-camera>
+
+    <a-entity xrlayerscene="name: sky; edgeSmoothness: 0.6">
+      <a-sky material="src: #skyTexture; transparent: true; opacity: 1;"></a-sky>
+
+      <a-box position="0 10 -10" scale="5 5 5" material="color: #AD50FF; shader: flat; src: assets/cube-texture.png" shadow></a-box>
+
+      <a-entity light="type: ambient; intensity: 1;"></a-entity>
+      </sky-scene>
+  </a-scene>
+</body>
+
+</html>
