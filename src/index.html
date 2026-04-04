@@ -10,18 +10,7 @@
   <script crossorigin="anonymous" src="../external/xrextras/xrextras.js"></script>
   <script crossorigin="anonymous" src="../external/landing-page/landing-page.js"></script>
   <script crossorigin="anonymous" src="../external/xr/xr.js" async="true" data-preload-chunks="slam"></script>
-  <script>
-    /* globals AFRAME */
-    AFRAME.registerComponent('sky-recenter', {
-      init() {
-        const recenter = () => {
-          this.el.emit('recenter')
-          this.el.removeEventListener('sky-coaching-overlay.hide', recenter)
-        }
-        this.el.addEventListener('sky-coaching-overlay.hide', recenter)
-      },
-    })
-  </script>
+  <script src="bundle.js"></script>
 </head>
 
 <body>
@@ -39,7 +28,8 @@
       <a-box position="0 10 -10" scale="5 5 5" material="color: #AD50FF; shader: flat; src: assets/cube-texture.png" shadow></a-box>
 
       <a-entity light="type: ambient; intensity: 1;"></a-entity>
-      </sky-scene>
+    </a-entity>
+
   </a-scene>
 </body>
 
