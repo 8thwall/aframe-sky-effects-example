@@ -13,6 +13,10 @@ This Sky Effects template project showcases the sky coaching overlay, explains h
 5. To connect to a mobile device, follow [these instructions](https://8th.io/test-on-mobile)
 6. Recommended: Track your files using [git](https://git-scm.com/about) to avoid losing progress
 
+## Deployment
+
+This project contains Github Actions configuration for deployment to Github Pages, which triggers automatically by pushing the `main` branch. You can also create a production build using `npm run build`, which outputs the production build to the `dist` folder, and publish to the web using [this guide](https://8thwall.org/docs/getting-started/publishing#self-hosting-your-project).
+
 ## *Developing Sky Effects Experiences*
 Sky effects scenes are designed for scenes that exist only in the sky.
 
