@@ -2,8 +2,7 @@
 
 This Sky Effects template project showcases the sky coaching overlay, explains how to use the sky scene to attach assets to the sky segmentation layer, and how to replace the sky texture.
 
-![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJhMTBmZDZmMDA2ODQwNzkzMmY5MmZmOTY0MDQ4NzQyODUzMjA3NCZjdD1n/5XPvrqoJ64p54GLj3i/giphy.gif)
-
+<video playsinline autoplay muted loop controls src="src/assets/preview.mp4" />
 ## Usage
 
 1. On this repository, click **Code** > **Download ZIP**. If you clone the repository instead, make sure you have Git LFS installed and run `git lfs pull`
@@ -12,6 +11,10 @@ This Sky Effects template project showcases the sky coaching overlay, explains h
 4. `npm run serve`
 5. To connect to a mobile device, follow [these instructions](https://8th.io/test-on-mobile)
 6. Recommended: Track your files using [git](https://git-scm.com/about) to avoid losing progress
+
+## Deployment
+
+This project contains Github Actions configuration for deployment to Github Pages, which triggers automatically by pushing the `main` branch. You can also create a production build using `npm run build`, which outputs the production build to the `dist` folder, and publish to the web using [this guide](https://8thwall.org/docs/getting-started/publishing#self-hosting-your-project).
 
 ## *Developing Sky Effects Experiences*
 Sky effects scenes are designed for scenes that exist only in the sky.
