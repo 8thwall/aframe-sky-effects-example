@@ -2,7 +2,8 @@
 
 This Sky Effects template project showcases the sky coaching overlay, explains how to use the sky scene to attach assets to the sky segmentation layer, and how to replace the sky texture.
 
-<video playsinline autoplay muted loop controls src="src/assets/preview.mp4" />
+<video playsinline autoplay muted loop controls src="src/assets/preview.mp4"></video>
+
 ## Usage
 
 1. On this repository, click **Code** > **Download ZIP**. If you clone the repository instead, make sure you have Git LFS installed and run `git lfs pull`
