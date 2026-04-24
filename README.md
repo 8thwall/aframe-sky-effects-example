@@ -4,6 +4,14 @@ This Sky Effects template project showcases the sky coaching overlay, explains h
 
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGJhMTBmZDZmMDA2ODQwNzkzMmY5MmZmOTY0MDQ4NzQyODUzMjA3NCZjdD1n/5XPvrqoJ64p54GLj3i/giphy.gif)
 
+<details><summary>Try it out</summary>
+
+https://8thwall.org/aframe-sky-effects-example/
+
+<img alt="QR Code for the preview link" src="https://8th.io/qr?v=2&url=https://8thwall.org/aframe-sky-effects-example/" width=250 height=250 />
+
+</details>
+
 ## Usage
 
 1. On this repository, click **Code** > **Download ZIP**. If you clone the repository instead, make sure you have Git LFS installed and run `git lfs pull`
