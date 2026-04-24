@@ -120,6 +120,7 @@ const config = {
   devServer: {
     open: false,
     compress: true,
+    allowedHosts: ['.ngrok-free.dev'],
     hot: true,
     liveReload: false,
     headers: {
