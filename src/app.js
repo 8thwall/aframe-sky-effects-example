@@ -9,7 +9,6 @@ AFRAME.registerComponent('sky-recenter', {
 })
 
 const xrloaded = () => {
-  console.log('xr loaded')
   document.body.insertAdjacentHTML('beforeend', require('./scene.html'))
 }
 
