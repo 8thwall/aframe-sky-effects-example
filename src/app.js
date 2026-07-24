@@ -7,3 +7,10 @@ AFRAME.registerComponent('sky-recenter', {
     this.el.addEventListener('sky-coaching-overlay.hide', recenter)
   },
 })
+
+const xrloaded = () => {
+  console.log('xr loaded')
+  document.body.insertAdjacentHTML('beforeend', require('./scene.html'))
+}
+
+window.XR8 ? xrloaded() : window.addEventListener('xrloaded', xrloaded, {once: true})
