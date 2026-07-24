@@ -7,36 +7,22 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <title>A-Frame: Sky Effects</title>
-  <meta name="description" content="This Sky Effects template project showcases the sky coaching overlay, explains how to use the sky scene to attach assets to the sky segmentation layer, and how to replace the sky texture.">
+  <meta name="description"
+    content="This Sky Effects template project showcases the sky coaching overlay, explains how to use the sky scene to attach assets to the sky segmentation layer, and how to replace the sky texture.">
   <meta property="og:title" content="A-Frame: Sky Effects">
-  <meta property="og:description" content="This Sky Effects template project showcases the sky coaching overlay, explains how to use the sky scene to attach assets to the sky segmentation layer, and how to replace the sky texture.">
+  <meta property="og:description"
+    content="This Sky Effects template project showcases the sky coaching overlay, explains how to use the sky scene to attach assets to the sky segmentation layer, and how to replace the sky texture.">
 
   <script src="./external/scripts/8frame-1.5.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/xrextras@1/dist/xrextras.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous"
+    data-preload-chunks="slam"></script>
 </head>
 
 <body>
   <script src="bundle.js"></script>
-  
-  <a-scene xrextras-loading xrextras-runtime-error landing-page sky-coaching-overlay sky-recenter renderer="colorManagement: true" xrlayers>
-
-    <a-assets>
-      <img id="skyTexture" src='assets/space.png'>
-    </a-assets>
-
-    <a-camera position="0 3 0"></a-camera>
-
-    <a-entity xrlayerscene="name: sky; edgeSmoothness: 0.6">
-      <a-sky material="src: #skyTexture; transparent: true; opacity: 1;"></a-sky>
-
-      <a-box position="0 10 -10" scale="5 5 5" material="color: #AD50FF; shader: flat; src: assets/cube-texture.png" shadow></a-box>
-
-      <a-entity light="type: ambient; intensity: 1;"></a-entity>
-    </a-entity>
-
-  </a-scene>
 </body>
 
 </html>

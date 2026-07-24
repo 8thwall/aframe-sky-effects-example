@@ -1,0 +1,19 @@
+<a-scene xrextras-loading xrextras-runtime-error landing-page sky-coaching-overlay sky-recenter
+  renderer="colorManagement: true" xrlayers>
+
+  <a-assets>
+    <img id="skyTexture" src='assets/space.png'>
+  </a-assets>
+
+  <a-camera position="0 3 0"></a-camera>
+
+  <a-entity xrlayerscene="name: sky; edgeSmoothness: 0.6">
+    <a-sky material="src: #skyTexture; transparent: true; opacity: 1;"></a-sky>
+
+    <a-box position="0 10 -10" scale="5 5 5" material="color: #AD50FF; shader: flat; src: assets/cube-texture.png"
+      shadow></a-box>
+
+    <a-entity light="type: ambient; intensity: 1;"></a-entity>
+  </a-entity>
+
+</a-scene>
