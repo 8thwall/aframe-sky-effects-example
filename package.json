@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "webpack --config config/webpack.config.js",
-    "serve": "webpack-dev-server --mode=development --config config/webpack.config.js"
+    "build": "node ./node_modules/webpack/bin/webpack.js --config config/webpack.config.js",
+    "serve": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode=development --config config/webpack.config.js"
   },
   "devDependencies": {
     "@babel/parser": "^7.23.9",
