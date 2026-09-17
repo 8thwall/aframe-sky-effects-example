@@ -1,0 +1,405 @@
+/* Mobile-First Glassmorphic Design System for Sky AR App */
+
+:root {
+  --bg-glass: rgba(18, 22, 36, 0.88);
+  --bg-glass-card: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.15);
+  --accent-cyan: #00f2fe;
+  --accent-blue: #4facfe;
+  --accent-purple: #9b51e0;
+  --accent-green: #00e676;
+  --text-main: #ffffff;
+  --text-sub: #cbd5e1;
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --shadow-glow: 0 8px 32px 0 rgba(0, 242, 254, 0.25);
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-family);
+  background-color: #000000;
+  color: var(--text-main);
+  touch-action: manipulation;
+}
+
+/* App Container */
+.app-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* AR View Wrapper */
+.ar-scene-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Header Bar */
+.mobile-header {
+  position: absolute;
+  top: max(16px, env(safe-area-inset-top));
+  left: 16px;
+  right: 16px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.brand-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-icon {
+  font-size: 1.2rem;
+  -webkit-text-fill-color: initial;
+}
+
+.header-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-green);
+  background: rgba(0, 230, 118, 0.12);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 230, 118, 0.3);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-green);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Mobile Bottom Toolbar */
+.mobile-bottom-bar {
+  position: absolute;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  left: 16px;
+  right: 16px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Quick Action Buttons Row */
+.quick-controls-row {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.icon-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 52px;
+  padding: 6px;
+  background: var(--bg-glass-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  touch-action: manipulation;
+}
+
+.icon-btn:active {
+  transform: scale(0.94);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.icon-btn.active {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.25), rgba(79, 172, 254, 0.25));
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: var(--shadow-glow);
+}
+
+.icon-btn .btn-icon {
+  font-size: 1.2rem;
+}
+
+/* Collapsible Panel Section */
+.drawer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tab Bar inside Drawer */
+.tab-bar {
+  display: flex;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(155, 81, 224, 0.3);
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-sub);
+}
+
+.upload-btn {
+  padding: 6px 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  background: rgba(0, 242, 254, 0.12);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-btn:active {
+  transform: scale(0.95);
+  background: rgba(0, 242, 254, 0.25);
+}
+
+/* Model Selector Cards */
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.model-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+  background: var(--bg-glass-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.model-card:active {
+  transform: scale(0.95);
+}
+
+.model-card.selected {
+  background: linear-gradient(135deg, rgba(155, 81, 224, 0.3), rgba(0, 242, 254, 0.3));
+  border-color: var(--accent-cyan);
+}
+
+.model-card-icon {
+  font-size: 1.3rem;
+}
+
+.model-card-title {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Toggle Switches & Sliders */
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--bg-glass-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+}
+
+.toggle-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.toggle-sub {
+  font-size: 0.65rem;
+  color: var(--text-sub);
+}
+
+/* iOS-style Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: .3s;
+  border-radius: 26px;
+  border: 1px solid var(--border-glass);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Range Slider */
+.range-slider {
+  accent-color: var(--accent-cyan);
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Floating Eruda Console Toggle Button */
+.eruda-toggle-fab {
+  position: absolute;
+  top: max(80px, calc(env(safe-area-inset-top) + 64px));
+  right: 16px;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(20, 20, 35, 0.88);
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.eruda-toggle-fab:active {
+  transform: scale(0.9);
+}

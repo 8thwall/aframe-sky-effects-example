@@ -33,7 +33,13 @@ declare module '../../../../../../assets/*' {
   export default content
 }
 
-declare module '../../../../../../../assets/*' {
+declare module '*.html?raw' {
   const content: string
   export default content
 }
+
+declare module '*.html' {
+  const content: string
+  export default content
+}
+
