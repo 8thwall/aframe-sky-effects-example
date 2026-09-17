@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <title>A-Frame: Sky Effects</title>
+  <title>Sky AR - React + 8th Wall + Three.js</title>
   <meta name="description"
-    content="This Sky Effects template project showcases the sky coaching overlay, explains how to use the sky scene to attach assets to the sky segmentation layer, and how to replace the sky texture.">
-  <meta property="og:title" content="A-Frame: Sky Effects">
-  <meta property="og:description"
-    content="This Sky Effects template project showcases the sky coaching overlay, explains how to use the sky scene to attach assets to the sky segmentation layer, and how to replace the sky texture.">
+    content="React 8th Wall Sky AR application with Three.js 4-directional lighting, flat shaders, GLB loader, and mobile remote debugging.">
 
-  <script src="./external/scripts/8frame-1.5.0.min.js"></script>
+  <!-- Mobile On-Device Console (Eruda) -->
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+
+  <!-- 8th Wall & A-Frame Core Engines -->
+  <script src="/external/scripts/8frame-1.5.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/xrextras@1/dist/xrextras.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js"
     crossorigin="anonymous"></script>
@@ -24,7 +27,9 @@
 </head>
 
 <body>
-  <script src="bundle.js"></script>
+  <div id="root"></div>
+  <script type="module" src="./main.jsx"></script>
 </body>
 
 </html>
+
