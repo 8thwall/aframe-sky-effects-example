@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
 
   <title>A-Frame: Sky Effects</title>
   <meta name="description"
@@ -13,8 +12,13 @@
   <meta property="og:description"
     content="This Sky Effects template project showcases the sky coaching overlay, explains how to use the sky scene to attach assets to the sky segmentation layer, and how to replace the sky texture.">
 
-  <script src="./external/scripts/8frame-1.5.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@8thwall/xrextras@1/dist/xrextras.js" crossorigin="anonymous"></script>
+  <!-- No favicon, avoids a 404 error in the console. -->
+  <link rel="icon" href="data:,">
+
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js" crossorigin="anonymous"></script>
+  <!-- XRExtras built from 8thwall/8thwall packages/xrextras with A-Frame 1.8 support, until it is
+       released. Then: https://cdn.jsdelivr.net/npm/@8thwall/xrextras@2/dist/xrextras.js -->
+  <script src="./external/scripts/xrextras/xrextras.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/coaching-overlay@1/dist/coaching-overlay.js"
